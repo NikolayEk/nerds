@@ -119,9 +119,8 @@ footer{
 }
 
 .doors{
-  white-space: nowrap;
   height: 427px;
-  overflow-x: auto;
+  overflow: auto;
   text-align: center;
 }
 
@@ -137,7 +136,9 @@ footer{
 }
 
 .smalldoor:hover>.bigdoor{
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
 }
 
 
@@ -158,9 +159,35 @@ footer{
     text-shadow: 0 0 2px greenyellow;
   }
 
+  .fontcolor{
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-top: 5px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 0 2px greenyellow;
+  }
+
 .bigdoor{
-  position: absolute;
-  top: -220px;
-  display: none;
+  position: fixed;
+  top: 10%;
+  left: 5%;
+  height: 570px;
+  width: 240px;
+  box-shadow: 0 0 10px 10px gainsboro;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0s linear 0.3s;
   z-index: 3;
+}
+
+.bigdoor>img{
+  margin-right: 5px;
+  display: inline-block;
+}
+
+.info{
+  height: 100%;
+  overflow: auto;
+  text-align: center;
 }
